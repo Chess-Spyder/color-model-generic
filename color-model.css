@@ -1,0 +1,93 @@
+:root {
+
+/* My generic color system */
+
+    --color-blackish: #222 ;
+    --color-whitish: #efefef ;
+    
+    --color-error: hsl(349, 100%, 24%) ; /* #B00020 */
+
+    --color-background-light: var(--color-whitish) ;
+    --color-background-light: var(--color-primary-like-white) ;
+    --color-background-dark: var(--color-gray-dark) ;
+
+    /* Link colors, for use when link text is differentiated SOLELY by color, i.e., no underlines,
+    that barely satsify  WCAG accessibility guidelines.*/
+
+    /*
+    Light mode, just barely AAA conformant.
+    See Jared Smith, “WCAG 2.0 and Link Colors,” WebAIM, July 22, 2009.
+    https://webaim.org/blog/wcag-2-0-and-link-colors/
+    */
+
+    --color-link-normal-light-mode: #3344dd ;
+    --color-link-hover-focus-active-light-mode: #b50010 ;
+    --color-link-visited-light-mode: #804180 ;
+
+    /*
+    Dark mode, just barely AA conformant.
+    See Greg S. Gibson, “A dark mode color palette that meets WCAG accessibility requirements,” hellogreg.org
+    https://hellogreg.org/accessible-dark-mode-color-palette/
+    */
+
+    --color-link-default-dark-mode: #808af8 ;
+    --color-link-active-dark-mode: #ee7022 ;
+    --color-link-hover-focus-dark-mode: #11ac11 ;
+    --color-link-visited-dark-mode: #808af8 ;
+    
+    /* This dark gray is appropriate for level-zero background in a dark theme   */
+    --color-gray-dark: hsl(0, 0%, 7%) ; /* #121212 */
+    
+    /* Opacities for text color */
+    --opacity-text-high-emphasis: 87% ;
+    --opacity-text-medium-emphasis: 60% ;
+    --opacity-text-disabled: 38% ;
+    
+    /* Color for black text on light background, with adjusted opacities */
+    --color-text-on-light-hsl: 0, 0%, 0% ;
+    --color-text-on-light-high-emphasis: hsla(var(--color-text-on-light-hsl), var(--opacity-text-high-emphasis)) ;
+    --color-text-on-light-medium-emphasis: hsla(var(--color-text-on-light-hsl), var(--opacity-text-medium-emphasis)) ;
+    --color-text-on-light-disabled: hsla(var(--color-text-on-light-hsl), var(--opacity-text-disabled)) ;
+    
+    /* Color for white text on dark background, with adjusted opacities */
+    --color-text-on-dark-hsl: 0, 0%, 100% ;
+    --color-text-on-dark-high-emphasis: hsla(var(--color-text-on-dark-hsl), var(--opacity-text-high-emphasis)) ;
+    --color-text-on-dark-medium-emphasis: hsla(var(--color-text-on-dark-hsl), var(--opacity-text-medium-emphasis)) ;
+    --color-text-on-dark-disabled: hsla(var(--color-text-on-dark-hsl), var(--opacity-text-disabled)) ;
+    
+    /* Colors for black, and white, body text */
+    --color-black-text: var(--color-text-on-light-high-emphasis) ;
+    --color-white-text: var(--color-text-on-dark-high-emphasis) ;
+  
+    /* Brand and accent colors */
+    --color-primary: hsl(265, 100%, 34%) ;  
+    --color-primary-lighter: hsl(265, 100%, 83%) ; 
+    --color-primary-darker: hsl(265, 100%, 20%) ; 
+    --color-primary-like-white: hsl(265, 100%, 99%) ;
+    
+    --color-secondary: hsl(25, 100%, 22%) ;
+    --color-secondary-lighter: hsl(25, 100%, 69%) ;
+    --color-secondary-darker: hsl(25, 100%, 12%) ;
+  
+    --color-tertiary: hsl(145, 100%, 42%) ;
+    --color-tertiary-lighter: hsl(145, 100%, 65%) ;
+    --color-tertiary-darker: hsl(145, 100%, 15%) ;
+  
+    
+    /* Text colors for use on each brand/accent color */
+    --color-on-primary: var(--color-text-on-dark-high-emphasis) ;
+    --color-on-primary-lighter: var(--color-text-on-light-high-emphasis) ;
+    --color-on-primary-darker: var(--color-text-on-dark-high-emphasis) ;
+    
+    --color-on-secondary: var(--color-text-on-dark-high-emphasis) ;
+    --color-on-secondary-lighter: var(--color-text-on-light-high-emphasis) ;
+    --color-on-secondary-darker: var(--color-text-on-dark-high-emphasis) ;
+    
+    --color-on-tertiary: var(--color-text-on-light-high-emphasis) ;
+    --color-on-tertiary-lighter: var(--color-text-on-light-high-emphasis) ;
+    --color-on-tertiary-darker: var(--color-text-on-dark-high-emphasis) ;
+    
+    --color-on-whiteish: var(--color-text-on-light-high-emphasis) ;
+    --color-on-blackish: var(--color-text-on-dark-high-emphasis) ;
+    --color-on-error: var(--color-text-on-dark-high-emphasis) ;
+}
